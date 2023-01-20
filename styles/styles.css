@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* css Reset */
+*{
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* storing variables */
+
+:root{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+}
+
+/* Formatting codes */
+
+
+/* mobile first */
+
+main{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0rem ;
+}
+.section-wrapper{
+    text-align: center;
+    width: min(300px,100%);
+
+}
+.section-wrapper>h1{
+    color: var(--Grayish-Blue);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: auto;
+}
+.section-wrapper>h1>span{
+    font-weight: 600;
+    display: block;
+    font-size: 1.5rem;
+    color: var(--Very-Dark-Blue);
+}
+.section-wrapper>p{
+    width: min(300px, 100%);
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    margin: 1.4rem auto;
+}
+.cards{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 1.4rem;
+}
+.cards>.card{
+    background-color: var(--Very-Light-Gray);
+    border-top: 4px var(--Cyan) solid;
+    border-radius: 4px;
+    text-align: left;
+    padding: 2.5rem ;
+    box-shadow: 0px 5px 20px rgba(81, 76, 76, 0.225);
+}
+.cards>.card:nth-child(2){
+    border-color: var(--Red);
+}
+.cards>.card:nth-child(2){
+    border-color: var(--Red);
+}
+.cards>.card:nth-child(3){
+    border-color: var(--Orange);
+}
+.cards>.card:nth-child(4){
+    border-color: var(--Blue);
+}
+.cards>.card>h2{
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.cards>.card>p{
+    font-size: .8rem;
+    line-height: 1.4;
+    color: var(--Grayish-Blue);
+    margin: 1rem 0rem 2.7rem 0;
+}
+img{
+    display: block;
+    margin-left: auto;
+    width: 50px;
+}
+
+/* desktop formatting codes */
+
+@media (min-width:600px){
+    .section-wrapper{
+        width: min(1100px, 100%);
+    }
+
+    .section-wrapper>h1{
+        font-size: 2rem;
+        width: 100%;
+    }
+    .section-wrapper>h1>span{
+        font-size: 2rem;
+    }
+    .section-wrapper>p{
+        width: min(600px,100%);
+        margin-bottom: 4rem;
+    }
+
+
+
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .cards>.card{
+        padding: ;
+    }
+    .cards>.card:nth-child(4){
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .cards>.card:nth-child(1){
+        transform:translateY(50%) ;
+    }
+    .cards>.card:nth-child(3){
+        transform:translateY(50%) ;   
+    }
+    .cards>.card>p{
+        width: min(240px, 100%);
+    }
+}
